@@ -1,58 +1,47 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
+import VideoEmbed from '@/components/VideoEmbed';
 
-const testimonials = [
+// Real employee video testimonials from Google Drive
+const videoTestimonials = [
   {
-    name: 'Julia',
-    role: 'Real Estate Transaction Coordinator',
-    years: '3 years at ShoreAgents',
-    image: '/images/IMG_8025_OPTIMIZED.jpg',
-    quote: 'ShoreAgents has completely transformed my career. The training, support, and opportunities for growth are incredible. I\'ve developed skills I never thought possible!',
-    rating: 5,
+    name: 'Diane Monterey',
+    driveId: '19qdZ4SsMqGmat2Hhk2S4GGwla5Xkji9z',
   },
   {
-    name: 'Keah',
-    role: 'Healthcare Virtual Assistant',
-    years: '2 years at ShoreAgents',
-    image: '/images/IMG_8025_OPTIMIZED.jpg',
-    quote: 'Working here feels like being part of a family. The culture is amazing, and I love the work-life balance. Plus, the benefits are unmatched!',
-    rating: 5,
+    name: 'Arman Jara',
+    driveId: '1fTsXkaA4v93kQKGZu5QCPRisY0JfpbsJ',
   },
   {
-    name: 'CJ',
-    role: 'Customer Success Manager',
-    years: '4 years at ShoreAgents',
-    image: '/images/IMG_8025_OPTIMIZED.jpg',
-    quote: 'I started as a VA and now I\'m leading a team. ShoreAgents truly invests in your growth. The career advancement opportunities are real!',
-    rating: 5,
+    name: 'Jacinto Darca',
+    driveId: '1f2gBDpdZzMqiNaah5NUrrek89WV95SpE',
   },
   {
-    name: 'Angelica',
-    role: 'Legal Support Specialist',
-    years: '2 years at ShoreAgents',
-    image: '/images/IMG_8025_OPTIMIZED.jpg',
-    quote: 'The training programs here are top-notch. I\'ve learned so much and feel confident in my role. My clients love working with me!',
-    rating: 5,
+    name: 'Catherine Cunanan',
+    driveId: '1-8Jw_Cey8jojhHzMU41k186Qycbxy_nb',
   },
   {
-    name: 'Mark',
-    role: 'Social Media Manager',
-    years: '1 year at ShoreAgents',
-    image: '/images/IMG_8025_OPTIMIZED.jpg',
-    quote: 'Best decision I ever made was joining ShoreAgents. Fun Fridays, amazing teammates, and meaningful work. What more could you ask for?',
-    rating: 5,
+    name: 'Kiel Tayag',
+    driveId: '1ZVicSmPa8vmuMCacFJU3oFwDHZo2D_2q',
   },
   {
-    name: 'Patricia',
-    role: 'Bookkeeper',
-    years: '3 years at ShoreAgents',
-    image: '/images/IMG_8025_OPTIMIZED.jpg',
-    quote: 'The management genuinely cares about employees. They listen to feedback and always find ways to improve our experience.',
-    rating: 5,
+    name: 'Ericka Imbornal',
+    driveId: '10hv2wWz54-W4fto0Qaxl_1FAKpR5i5Fl',
+  },
+  {
+    name: 'Reachelle Dela Cruz',
+    driveId: '1PasIZs_R-f0j5IZDpatVOatXYtXH7OKd',
+  },
+  {
+    name: 'Ryan Bautista',
+    driveId: '1f8VBuElEU75RGmzS7J9wHRgxVxWB4JOJ',
+  },
+  {
+    name: 'Jonathan Castro',
+    driveId: '1rI_pKKRpj43y3UbhhI102olLNhYg5WRM',
   },
 ];
 
@@ -98,7 +87,7 @@ export default function ReviewsPage() {
               <span className="gradient-text">What Our Team Says</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Hear from real ShoreAgents team members about their experience
+              Hear directly from real ShoreAgents team members about their experience
             </p>
           </motion.div>
         </div>
@@ -126,54 +115,67 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Video Testimonials */}
       <section className="py-16 md:py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="gradient-text">Employee Stories</span>
+              <span className="gradient-text">Meet Our Team</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Real stories from real team members
+              Watch real stories from our amazing team members
             </p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
+            {videoTestimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="glass rounded-2xl p-6"
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="group"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-[#ec297b]/30">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{testimonial.name}</h3>
-                    <p className="text-[#ec297b] text-sm">{testimonial.role}</p>
-                    <p className="text-gray-500 text-xs">{testimonial.years}</p>
-                  </div>
-                </div>
-                <StarRating rating={testimonial.rating} />
-                <p className="text-gray-300 mt-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
+                <VideoEmbed 
+                  driveId={testimonial.driveId}
+                  title={`${testimonial.name} - ShoreAgents`}
+                  className="mb-3"
+                />
+                <h3 className="text-lg font-semibold text-white group-hover:text-[#ec297b] transition-colors">
+                  {testimonial.name}
+                </h3>
+                <p className="text-gray-400 text-sm">ShoreAgents Team Member</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Google Reviews */}
+      {/* Client Testimonial - Box Brownie */}
       <section className="py-16 md:py-24 bg-[#0B1120]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Client Testimonial</span>
+            </h2>
+            <p className="text-gray-400">What our clients say about working with ShoreAgents</p>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={0.2}>
+            <VideoEmbed 
+              driveId="15h-uIngTA8rfu2Ws8KVv3RauFW_8jv1V"
+              title="Box Brownie Testimonial"
+              className="glow-blue"
+            />
+            <p className="text-center text-white font-semibold mt-4">Box Brownie</p>
+            <p className="text-center text-gray-400 text-sm">ShoreAgents Client Partner</p>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Google Reviews */}
+      <section className="py-16 md:py-24 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
             <div className="glass rounded-2xl p-8 md:p-12">
@@ -212,7 +214,7 @@ export default function ReviewsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24 bg-gray-900">
+      <section className="py-16 md:py-24 bg-[#0B1120]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AnimatedSection>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">

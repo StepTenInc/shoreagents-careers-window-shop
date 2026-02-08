@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
 import Stats from '@/components/Stats';
+import VideoEmbed from '@/components/VideoEmbed';
 
 const featuredJobs = [
   { title: 'Real Estate Transaction Coordinator', type: 'Full-time', location: 'Clark, Philippines' },
@@ -166,8 +167,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Jobs */}
+      {/* Company Video */}
       <section className="py-16 md:py-24 bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Our Story</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Discover what makes ShoreAgents the best place to build your career
+            </p>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={0.2}>
+            <VideoEmbed 
+              driveId="1wvUXGIu3SyUWqk_J1_rzQ6t_dThJFMKA"
+              title="ShoreAgents Company Video"
+              className="glow-pink"
+            />
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Featured Jobs */}
+      <section className="py-16 md:py-24 bg-[#0B1120]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

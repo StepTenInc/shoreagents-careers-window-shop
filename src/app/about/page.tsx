@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
+import VideoEmbed from '@/components/VideoEmbed';
 
 const values = [
   {
@@ -59,8 +60,28 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Company Video */}
       <section className="py-16 md:py-24 bg-gray-900">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">See Who We Are</span>
+            </h2>
+            <p className="text-gray-400">Watch our story</p>
+          </AnimatedSection>
+          
+          <AnimatedSection delay={0.2}>
+            <VideoEmbed 
+              driveId="1wvUXGIu3SyUWqk_J1_rzQ6t_dThJFMKA"
+              title="ShoreAgents Company Video"
+              className="glow-pink"
+            />
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="py-16 md:py-24 bg-[#0B1120]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
@@ -91,13 +112,6 @@ export default function AboutPage() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                  <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
-                    <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
               </motion.div>
             </AnimatedSection>
           </div>
@@ -105,7 +119,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 md:py-24 bg-[#0B1120]">
+      <section className="py-16 md:py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -139,7 +153,7 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership */}
-      <section className="py-16 md:py-24 bg-gray-900">
+      <section className="py-16 md:py-24 bg-[#0B1120]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -178,7 +192,7 @@ export default function AboutPage() {
       </section>
 
       {/* Location */}
-      <section className="py-16 md:py-24 bg-[#0B1120]">
+      <section className="py-16 md:py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
