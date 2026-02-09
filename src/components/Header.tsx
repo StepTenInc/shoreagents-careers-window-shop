@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { useApplyModal } from '@/context/ApplyModalContext';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -20,6 +21,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const { scrollY } = useScroll();
+  const { openApplyModal } = useApplyModal();
   
   const headerBackground = useTransform(
     scrollY,
@@ -99,9 +101,9 @@ export default function Header() {
               transition={{ delay: 0.4 }}
               className="ml-4"
             >
-              <Link
-                href="/jobs"
-                className="relative group px-6 py-2.5 rounded-full overflow-hidden"
+              <button
+                onClick={openApplyModal}
+                className="relative group px-6 py-2.5 rounded-full overflow-hidden cursor-pointer"
               >
                 {/* Animated gradient background */}
                 <span className="absolute inset-0 bg-gradient-to-r from-[#ec297b] to-[#f47fb0] transition-all duration-300" />
@@ -115,7 +117,7 @@ export default function Header() {
                 <span className="relative z-10 text-white font-semibold">
                   Apply Now
                 </span>
-              </Link>
+              </button>
             </motion.div>
           </div>
 
@@ -185,13 +187,15 @@ export default function Header() {
                 transition={{ delay: navItems.length * 0.05, type: 'spring', stiffness: 200 }}
                 className="pt-2"
               >
-                <Link
-                  href="/jobs"
-                  onClick={() => setIsOpen(false)}
-                  className="block px-4 py-3 bg-gradient-to-r from-[#ec297b] to-[#f47fb0] text-white font-semibold rounded-xl text-center shadow-lg shadow-pink-500/20"
+                <button
+                  onClick={() => {
+                    setIsOpen(false);
+                    openApplyModal();
+                  }}
+                  className="block w-full px-4 py-3 bg-gradient-to-r from-[#ec297b] to-[#f47fb0] text-white font-semibold rounded-xl text-center shadow-lg shadow-pink-500/20"
                 >
                   Apply Now
-                </Link>
+                </button>
               </motion.div>
             </div>
           </motion.div>

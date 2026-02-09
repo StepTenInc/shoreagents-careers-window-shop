@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ApplyModalProvider } from "@/context/ApplyModalContext";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -33,11 +34,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased bg-[#070a12] text-white`}>
-        <Header />
-        <main className="min-h-screen pt-16 md:pt-20">
-          {children}
-        </main>
-        <Footer />
+        <ApplyModalProvider>
+          <Header />
+          <main className="min-h-screen pt-16 md:pt-20">
+            {children}
+          </main>
+          <Footer />
+        </ApplyModalProvider>
       </body>
     </html>
   );
