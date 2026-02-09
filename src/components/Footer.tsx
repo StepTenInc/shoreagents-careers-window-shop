@@ -17,11 +17,10 @@ const footerLinks = {
     { name: 'Reviews', href: '/reviews' },
   ],
   social: [
-    { name: 'Facebook', href: 'https://facebook.com/shoreagents', icon: 'facebook', color: '#1877F2' },
-    { name: 'Instagram', href: 'https://instagram.com/shoreagents', icon: 'instagram', color: '#E4405F' },
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/shoreagents', icon: 'linkedin', color: '#0A66C2' },
-    { name: 'TikTok', href: 'https://tiktok.com/@shoreagents', icon: 'tiktok', color: '#00f2ea' },
-    { name: 'YouTube', href: 'https://youtube.com/@shoreagents', icon: 'youtube', color: '#FF0000' },
+    { name: 'Facebook', href: 'https://www.facebook.com/shoreagentscareers', icon: 'facebook', color: '#1877F2' },
+    { name: 'Instagram', href: 'https://www.instagram.com/shoreagentscareers', icon: 'instagram', color: '#E4405F' },
+    { name: 'TikTok', href: 'https://www.tiktok.com/@careers.shoreagents', icon: 'tiktok', color: '#00f2ea' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/shoreagents', icon: 'linkedin', color: '#0A66C2' },
   ],
 };
 
