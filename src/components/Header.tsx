@@ -95,31 +95,7 @@ export default function Header() {
               </motion.div>
             ))}
             
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-              className="ml-4"
-            >
-              <button
-                onClick={openApplyModal}
-                className="relative group px-6 py-2.5 rounded-full overflow-hidden cursor-pointer"
-              >
-                {/* Animated gradient background */}
-                <span className="absolute inset-0 bg-gradient-to-r from-[#ec297b] to-[#f47fb0] transition-all duration-300" />
-                
-                {/* Glow effect */}
-                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl bg-gradient-to-r from-[#ec297b] to-[#f47fb0]" />
-                
-                {/* Shine effect */}
-                <span className="absolute top-0 left-[-100%] w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 group-hover:left-[100%] transition-all duration-700" />
-                
-                <span className="relative z-10 text-white font-semibold">
-                  Apply Now
-                </span>
-              </button>
-            </motion.div>
+
           </div>
 
           {/* Mobile menu button */}
@@ -182,22 +158,7 @@ export default function Header() {
                   </Link>
                 </motion.div>
               ))}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: navItems.length * 0.05, type: 'spring', stiffness: 200 }}
-                className="pt-2"
-              >
-                <button
-                  onClick={() => {
-                    setIsOpen(false);
-                    openApplyModal();
-                  }}
-                  className="block w-full px-4 py-3 bg-gradient-to-r from-[#ec297b] to-[#f47fb0] text-white font-semibold rounded-xl text-center shadow-lg shadow-pink-500/20"
-                >
-                  Apply Now
-                </button>
-              </motion.div>
+
             </div>
           </motion.div>
         )}

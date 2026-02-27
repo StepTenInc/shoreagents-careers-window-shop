@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const CLICKUP_TOKEN = 'pk_12704501_FTWRQ2IXJ7NJX5WOPDXKAI5DQAXM5KQO';
-const CLICKUP_LIST_ID = '162069965'; // Dream Catchers — "Bait we need out there!"
+const CLICKUP_LIST_ID = '187709500'; // Matchmakers — ShoreAgents Careers Cycle
 
 export async function POST(req: NextRequest) {
   try {
