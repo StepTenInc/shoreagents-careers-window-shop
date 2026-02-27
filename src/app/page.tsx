@@ -64,7 +64,7 @@ export default function HomePage() {
           style={{ y: heroY, scale: heroScale }}
         >
           <Image
-            src="/images/IMG_8025_OPTIMIZED.jpg"
+            src="/images/staff/staff-1.jpg"
             alt="ShoreAgents Office"
             fill
             className="object-cover opacity-30"
@@ -326,7 +326,7 @@ export default function HomePage() {
               className="relative rounded-2xl overflow-hidden glow-pink"
             >
               <VideoEmbed 
-                driveId="1wvUXGIu3SyUWqk_J1_rzQ6t_dThJFMKA"
+                youtubeId="Ckz4pCIQhJo"
                 title="ShoreAgents Company Video"
               />
             </motion.div>

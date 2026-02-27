@@ -4,23 +4,31 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface VideoEmbedProps {
-  driveId: string;
+  youtubeId?: string;
+  driveId?: string;
   title?: string;
   className?: string;
   aspectRatio?: 'video' | 'square';
 }
 
-export default function VideoEmbed({ driveId, title, className = '', aspectRatio = 'video' }: VideoEmbedProps) {
+export default function VideoEmbed({ youtubeId, driveId, title, className = '', aspectRatio = 'video' }: VideoEmbedProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const aspectClass = aspectRatio === 'square' ? 'aspect-square' : 'aspect-video';
-  
+
+  const src = youtubeId
+    ? `https://www.youtube.com/embed/${youtubeId}?rel=0&modestbranding=1`
+    : driveId
+    ? `https://drive.google.com/file/d/${driveId}/preview`
+    : null;
+
+  if (!src) return null;
+
   return (
     <motion.div
       whileHover={{ scale: 1.01 }}
       transition={{ duration: 0.3 }}
       className={`relative ${aspectClass} rounded-2xl overflow-hidden glass group ${className}`}
     >
-      {/* Loading shimmer */}
       {!isLoaded && (
         <div className="absolute inset-0 bg-gradient-to-r from-white/5 via-white/10 to-white/5 animate-pulse">
           <div className="absolute inset-0 flex items-center justify-center">
@@ -34,20 +42,19 @@ export default function VideoEmbed({ driveId, title, className = '', aspectRatio
           </div>
         </div>
       )}
-      
+
       <iframe
-        src={`https://drive.google.com/file/d/${driveId}/preview`}
+        src={src}
         title={title || 'Video'}
         width="100%"
         height="100%"
-        allow="autoplay; fullscreen"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
         allowFullScreen
         className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
         style={{ border: 0 }}
         onLoad={() => setIsLoaded(true)}
       />
-      
-      {/* Hover overlay with glow */}
+
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
         <div className="absolute inset-0 rounded-2xl ring-2 ring-[#ec297b]/30" />
       </div>

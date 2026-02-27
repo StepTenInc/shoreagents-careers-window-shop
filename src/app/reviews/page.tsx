@@ -9,15 +9,7 @@ import GlowButton from '@/components/GlowButton';
 import GlassCard from '@/components/GlassCard';
 
 const videoTestimonials = [
-  { name: 'Diane Monterey', driveId: '19qdZ4SsMqGmat2Hhk2S4GGwla5Xkji9z' },
-  { name: 'Arman Jara', driveId: '1fTsXkaA4v93kQKGZu5QCPRisY0JfpbsJ' },
-  { name: 'Jacinto Darca', driveId: '1f2gBDpdZzMqiNaah5NUrrek89WV95SpE' },
-  { name: 'Catherine Cunanan', driveId: '1-8Jw_Cey8jojhHzMU41k186Qycbxy_nb' },
-  { name: 'Kiel Tayag', driveId: '1ZVicSmPa8vmuMCacFJU3oFwDHZo2D_2q' },
-  { name: 'Ericka Imbornal', driveId: '10hv2wWz54-W4fto0Qaxl_1FAKpR5i5Fl' },
-  { name: 'Reachelle Dela Cruz', driveId: '1PasIZs_R-f0j5IZDpatVOatXYtXH7OKd' },
-  { name: 'Ryan Bautista', driveId: '1f8VBuElEU75RGmzS7J9wHRgxVxWB4JOJ' },
-  { name: 'Jonathan Castro', driveId: '1rI_pKKRpj43y3UbhhI102olLNhYg5WRM' },
+  { name: 'ShoreAgents Team', youtubeId: 'Ckz4pCIQhJo' },
 ];
 
 const stats = [
@@ -136,7 +128,7 @@ export default function ReviewsPage() {
                 >
                   <div className="rounded-2xl overflow-hidden mb-4 glow-pink">
                     <VideoEmbed 
-                      driveId={testimonial.driveId}
+                      youtubeId="Ckz4pCIQhJo"
                       title={`${testimonial.name} - ShoreAgents`}
                     />
                   </div>
@@ -181,7 +173,7 @@ export default function ReviewsPage() {
               className="rounded-2xl overflow-hidden glow-blue"
             >
               <VideoEmbed 
-                driveId="15h-uIngTA8rfu2Ws8KVv3RauFW_8jv1V"
+                youtubeId="Ckz4pCIQhJo"
                 title="Box Brownie Testimonial"
               />
             </motion.div>

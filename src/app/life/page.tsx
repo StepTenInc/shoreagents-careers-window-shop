@@ -9,14 +9,14 @@ import GlowButton from '@/components/GlowButton';
 import GlassCard from '@/components/GlassCard';
 
 const socialContent = [
-  { type: 'video', platform: 'YouTube', title: 'A Day in the Life at ShoreAgents', thumbnail: '/images/IMG_8025_OPTIMIZED.jpg', color: '#FF0000' },
-  { type: 'video', platform: 'TikTok', title: 'Fun Friday Highlights', thumbnail: '/images/IMG_8025_OPTIMIZED.jpg', color: '#00f2ea' },
-  { type: 'image', platform: 'Facebook', title: 'Team Building 2026', thumbnail: '/images/IMG_8025_OPTIMIZED.jpg', color: '#1877F2' },
-  { type: 'video', platform: 'YouTube', title: 'Office Tour', thumbnail: '/images/IMG_8025_OPTIMIZED.jpg', color: '#FF0000' },
-  { type: 'image', platform: 'Instagram', title: 'Christmas Party', thumbnail: '/images/IMG_8025_OPTIMIZED.jpg', color: '#E4405F' },
-  { type: 'video', platform: 'TikTok', title: 'Behind the Scenes', thumbnail: '/images/IMG_8025_OPTIMIZED.jpg', color: '#00f2ea' },
-  { type: 'image', platform: 'Facebook', title: 'New Hire Welcome', thumbnail: '/images/IMG_8025_OPTIMIZED.jpg', color: '#1877F2' },
-  { type: 'video', platform: 'YouTube', title: 'Employee Testimonials', thumbnail: '/images/IMG_8025_OPTIMIZED.jpg', color: '#FF0000' },
+  { type: 'video', platform: 'YouTube', title: 'A Day in the Life at ShoreAgents', thumbnail: '/images/staff/staff-1.jpg', color: '#FF0000' },
+  { type: 'video', platform: 'TikTok', title: 'Fun Friday Highlights', thumbnail: '/images/staff/staff-2.jpg', color: '#00f2ea' },
+  { type: 'image', platform: 'Facebook', title: 'Team Building 2026', thumbnail: '/images/staff/staff-3.jpg', color: '#1877F2' },
+  { type: 'video', platform: 'YouTube', title: 'Office Tour', thumbnail: '/images/staff/staff-4.jpg', color: '#FF0000' },
+  { type: 'image', platform: 'Instagram', title: 'Christmas Party', thumbnail: '/images/staff/staff-5.jpg', color: '#E4405F' },
+  { type: 'video', platform: 'TikTok', title: 'Behind the Scenes', thumbnail: '/images/staff/staff-6.jpg', color: '#00f2ea' },
+  { type: 'image', platform: 'Facebook', title: 'New Hire Welcome', thumbnail: '/images/staff/staff-1.jpg', color: '#1877F2' },
+  { type: 'video', platform: 'YouTube', title: 'Employee Testimonials', thumbnail: '/images/staff/staff-2.jpg', color: '#FF0000' },
 ];
 
 const culture = [

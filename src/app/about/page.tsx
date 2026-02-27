@@ -36,9 +36,9 @@ const values = [
 ];
 
 const leadership = [
-  { name: 'Stephen Atcheler', role: 'Founder & CEO', image: '/images/IMG_8025_OPTIMIZED.jpg' },
-  { name: 'Operations Team', role: 'Leadership', image: '/images/IMG_8025_OPTIMIZED.jpg' },
-  { name: 'HR Team', role: 'People & Culture', image: '/images/IMG_8025_OPTIMIZED.jpg' },
+  { name: 'Stephen Atcheler', role: 'Founder & CEO', image: '/images/staff/staff-1.jpg' },
+  { name: 'Operations Team', role: 'Leadership', image: '/images/staff/staff-2.jpg' },
+  { name: 'HR Team', role: 'People & Culture', image: '/images/staff/staff-3.jpg' },
 ];
 
 export default function AboutPage() {
@@ -101,7 +101,7 @@ export default function AboutPage() {
               className="rounded-2xl overflow-hidden glow-pink"
             >
               <VideoEmbed 
-                driveId="1wvUXGIu3SyUWqk_J1_rzQ6t_dThJFMKA"
+                youtubeId="Ckz4pCIQhJo"
                 title="ShoreAgents Company Video"
               />
             </motion.div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 
                 <div className="relative aspect-video rounded-2xl overflow-hidden glow-pink">
                   <Image
-                    src="/images/IMG_8025_OPTIMIZED.jpg"
+                    src="/images/staff/staff-4.jpg"
                     alt="ShoreAgents Office"
                     fill
                     className="object-cover"

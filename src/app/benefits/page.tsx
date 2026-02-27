@@ -71,12 +71,12 @@ const perks = [
 ];
 
 const photos = [
-  { src: '/images/IMG_8025_OPTIMIZED.jpg', title: 'Team Building 2026' },
-  { src: '/images/IMG_8025_OPTIMIZED.jpg', title: 'Fun Friday Games' },
-  { src: '/images/IMG_8025_OPTIMIZED.jpg', title: 'Christmas Party' },
-  { src: '/images/IMG_8025_OPTIMIZED.jpg', title: 'Office Life' },
-  { src: '/images/IMG_8025_OPTIMIZED.jpg', title: 'Awards Night' },
-  { src: '/images/IMG_8025_OPTIMIZED.jpg', title: 'Summer Outing' },
+  { src: '/images/staff/staff-1.jpg', title: 'Team Building 2026' },
+  { src: '/images/staff/staff-2.jpg', title: 'Fun Friday Games' },
+  { src: '/images/staff/staff-3.jpg', title: 'Christmas Party' },
+  { src: '/images/staff/staff-4.jpg', title: 'Office Life' },
+  { src: '/images/staff/staff-5.jpg', title: 'Awards Night' },
+  { src: '/images/staff/staff-6.jpg', title: 'Summer Outing' },
 ];
 
 export default function BenefitsPage() {
