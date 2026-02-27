@@ -21,10 +21,10 @@ const featuredJobs = [
 ];
 
 const socialPosts = [
-  { platform: 'Team Event', image: '/images/IMG_8025_OPTIMIZED.jpg', title: 'Fun Friday at the Office!' },
-  { platform: 'Culture', image: '/images/IMG_8025_OPTIMIZED.jpg', title: 'Team Building 2026' },
-  { platform: 'Growth', image: '/images/IMG_8025_OPTIMIZED.jpg', title: 'Career Development' },
-  { platform: 'Celebration', image: '/images/IMG_8025_OPTIMIZED.jpg', title: 'Monthly Awards' },
+  { platform: 'Team Event', image: '/images/staff/staff-1.jpg', title: 'Our ShoreAgents Team' },
+  { platform: 'Culture', image: '/images/staff/staff-2.jpg', title: 'Life at the Office' },
+  { platform: 'Growth', image: '/images/staff/staff-3.jpg', title: 'Team Building' },
+  { platform: 'Celebration', image: '/images/staff/staff-4.jpg', title: 'Our People' },
 ];
 
 const typewriterTexts = [

@@ -15,6 +15,7 @@ const navItems = [
   { name: 'Industries', href: '/industries' },
   { name: 'Jobs', href: '/jobs' },
   { name: 'Reviews', href: '/reviews' },
+  { name: 'Apply', href: '/apply' },
 ];
 
 export default function Header() {
